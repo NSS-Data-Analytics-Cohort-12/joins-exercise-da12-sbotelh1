@@ -81,4 +81,12 @@
 -- USING(movie_id)
 -- 	WHERE length_in_min >= 120
 
+--OR
+
+-- SELECT (length_in_min<120) AS movies_under_2hr, (length_in_min>=120) AS movies_over_2hr, avg(imdb_rating)
+-- FROM specs
+-- INNER JOIN rating
+-- USING(movie_id)
+-- group by (length_in_min<120), (length_in_min>=120)
+
 -- Movies with length over 2 hours have higher average ratings.
